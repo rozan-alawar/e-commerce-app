@@ -14,10 +14,15 @@ class SearchSection extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
         children: [
-          Expanded(child: PrimaryTextField()),
+          Expanded(
+            child: PrimaryTextField(
+              prefixIcon: SvgPicture.asset(IconAssets.search),
+              hint: "Search here",
+            ),
+          ),
           16.width,
           Container(
-            padding: EdgeInsets.all(6),
+            padding: EdgeInsets.all(12),
             decoration: BoxDecoration(
               color: Colors.white,
               border: Border.all(color: AppColors.border),
@@ -25,12 +30,7 @@ class SearchSection extends StatelessWidget {
             ),
             width: 51,
             height: 51,
-            child: SvgPicture.asset(
-              IconAssets.sort,
-              width: 30,
-              height: 30,
-              fit: BoxFit.contain,
-            ),
+            child: SvgPicture.asset(IconAssets.sort, fit: BoxFit.contain),
           ),
         ],
       ),

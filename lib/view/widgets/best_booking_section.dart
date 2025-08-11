@@ -8,11 +8,7 @@ import 'package:flutter/material.dart';
 class BestBooking extends StatelessWidget {
   BestBooking({super.key});
 
-  final services = [
-    ImageAssets.service1,
-    ImageAssets.service2,
-    ImageAssets.service3,
-  ];
+  final books = [ImageAssets.book1, ImageAssets.book2];
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -21,7 +17,7 @@ class BestBooking extends StatelessWidget {
         physics: NeverScrollableScrollPhysics(),
         separatorBuilder: (context, index) => 20.height,
         shrinkWrap: true,
-        itemCount: services.length,
+        itemCount: books.length,
         itemBuilder: (context, index) => Padding(
           padding: EdgeInsetsDirectional.symmetric(horizontal: 16),
           child: Column(
@@ -29,7 +25,7 @@ class BestBooking extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.circular(16),
                 child: Image.asset(
-                  services[index],
+                  books[index],
                   width: double.infinity,
                   height: 200,
                   fit: BoxFit.fill,
@@ -38,7 +34,12 @@ class BestBooking extends StatelessWidget {
               12.height,
               Row(
                 children: [
-                  CircleAvatar(radius: 30),
+                  Image.asset(
+                    ImageAssets.profilePic,
+                    height: 50,
+                    width: 50,
+                    fit: BoxFit.cover,
+                  ),
                   16.width,
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

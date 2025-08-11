@@ -5,8 +5,14 @@ import 'package:ecommerce_app/core/widgets/primary_text_widget.dart';
 import 'package:flutter/material.dart';
 
 class TopFreelancersSection extends StatelessWidget {
-  const TopFreelancersSection({super.key});
+  TopFreelancersSection({super.key});
 
+  final users = [
+    ImageAssets.user1,
+    ImageAssets.user2,
+    ImageAssets.user3,
+    ImageAssets.user4,
+  ];
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -16,20 +22,26 @@ class TopFreelancersSection extends StatelessWidget {
         separatorBuilder: (context, index) => 20.width,
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
-        itemCount: 5,
+        itemCount: users.length,
         itemBuilder: (context, index) => Padding(
           padding: EdgeInsetsDirectional.only(
             start: index == 0 ? 16 : 0,
             end: index == 4 ? 16 : 0,
           ),
           child: SizedBox(
-            width: 110,
+            width: 120,
             child: Stack(
               alignment: Alignment.topCenter,
               children: [
-                CircleAvatar(
-                  radius: 50,
-                  child: Image.asset(ImageAssets.girl, fit: BoxFit.contain),
+                SizedBox(
+                  width: 100,
+                  height: 100,
+                  child: Image.asset(
+                    users[index],
+                    fit: BoxFit.cover,
+                    height: 72,
+                    width: 72,
+                  ),
                 ),
                 Positioned(
                   bottom: 10,
@@ -42,9 +54,9 @@ class TopFreelancersSection extends StatelessWidget {
                           color: Colors.white,
                           boxShadow: [
                             BoxShadow(
-                              blurRadius: 1,
+                              blurRadius: 12,
                               color: Colors.black.withValues(alpha: 0.16),
-                              offset: Offset(0, 2),
+                              offset: Offset(-2, 2),
                             ),
                           ],
                         ),

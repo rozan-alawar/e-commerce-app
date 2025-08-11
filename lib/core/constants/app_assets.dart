@@ -2,11 +2,23 @@ const String IMAGE_PATH = "assets/images";
 const String ICONS_PATH = "assets/icons";
 
 class ImageAssets {
-  static const String girl = "$IMAGE_PATH/girl.png";
   static const String logo = "$IMAGE_PATH/logo.png";
+
+  static const String girl = "$IMAGE_PATH/girl.png";
+
   static const String service1 = "$IMAGE_PATH/service1.png";
   static const String service2 = "$IMAGE_PATH/service2.png";
   static const String service3 = "$IMAGE_PATH/service3.png";
+
+  static const String user1 = "$IMAGE_PATH/user1.png";
+  static const String user2 = "$IMAGE_PATH/user2.png";
+  static const String user3 = "$IMAGE_PATH/user3.png";
+  static const String user4 = "$IMAGE_PATH/user4.png";
+
+  static const String book1 = "$IMAGE_PATH/book1.png";
+  static const String book2 = "$IMAGE_PATH/book2.png";
+
+  static const String profilePic = "$IMAGE_PATH/profile_pic.png";
 }
 
 class IconAssets {

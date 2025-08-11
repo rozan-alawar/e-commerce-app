@@ -58,7 +58,12 @@ class ServiceSection extends StatelessWidget {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      CircleAvatar(radius: 25),
+                      Image.asset(
+                        ImageAssets.profilePic,
+                        height: 50,
+                        width: 50,
+                        fit: BoxFit.cover,
+                      ),
                       8.width,
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,

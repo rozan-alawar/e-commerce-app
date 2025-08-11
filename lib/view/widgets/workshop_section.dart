@@ -30,7 +30,7 @@ class WorkshopSection extends StatelessWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(16),
                   child: Image.asset(
-                    ImageAssets.service2,
+                    ImageAssets.book1,
                     height: 200,
                     fit: BoxFit.fill,
                   ),
