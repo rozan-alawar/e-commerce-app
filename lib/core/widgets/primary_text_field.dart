@@ -11,6 +11,7 @@ class PrimaryTextField extends StatefulWidget {
   final String? Function(String?)? validator;
   final void Function(String)? onChanged;
   final void Function()? onTap;
+  final void Function(String?)? onSaved;
   final TextInputType? keyboardType;
   final bool obscureText;
   final bool readOnly;
@@ -44,6 +45,7 @@ class PrimaryTextField extends StatefulWidget {
     this.textInputAction,
     this.inputFormatters,
     this.contentPadding,
+    this.onSaved,
   });
 
   @override
@@ -85,6 +87,7 @@ class _CustomTextFieldState extends State<PrimaryTextField> {
             validator: widget.validator,
             onChanged: widget.onChanged,
             onTap: widget.onTap,
+            onFieldSubmitted: widget.onSaved,
             keyboardType: widget.keyboardType,
             obscureText: widget.obscureText && !_isPasswordVisible,
             readOnly: widget.readOnly,
@@ -108,6 +111,7 @@ class _CustomTextFieldState extends State<PrimaryTextField> {
               ),
               filled: false,
               border: InputBorder.none,
+
               enabledBorder: InputBorder.none,
               focusedBorder: InputBorder.none,
               errorBorder: InputBorder.none,

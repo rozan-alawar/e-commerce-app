@@ -1,4 +1,5 @@
-import 'package:ecommerce_app/view/screens/home_screen.dart';
+import 'package:ecommerce_app/core/routes/router.dart';
+import 'package:ecommerce_app/core/routes/routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         ),
         debugShowCheckedModeBanner: false,
-        home: HomeScreen(),
+        initialRoute: Routes.home,
+        onGenerateRoute: AppRoutes.onGenerateRoutes,
       ),
     );
   }
